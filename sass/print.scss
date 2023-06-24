@@ -1,0 +1,323 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+ @import "compass/css3/";
+ /* fonts */
+ @import url("https://fonts.googleapis.com/css?family=Poppins|Faster+One|Homemade+Apple|VT323");
+ 
+ $fonts00: "Faster One", cursive;
+ $fonts01: 'Poppins', sans-serif;
+ $fonts02: "Homemade Apple", cursive;
+ $fonts03: 'VT323', monospace;
+ 
+ // colors
+ $white: white;
+ $black: black;
+ $gray: gray;
+ $light_gray: lightGray;
+ $red: red;
+ $red_opacue: rgba(252, 81, 81, 0.5);
+ $green: green;
+ $yellow: yellow;
+ $purple: purple;
+ 
+ /* html, body*/
+ *, html {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body {
+     width: 100%;
+     overflow-x: hidden;
+ }
+ 
+ #banner {
+     font-family: $fonts00;
+     right: -5em;
+     top: 4em;
+     z-index: 8;
+     transform: rotate(45deg);
+     z-index: 0;
+     position: absolute;
+     text-align: center;
+     font-size: 2.5rem;
+     background-color: $red;
+     color: $white;
+     width: 15em;
+     height: 3rem;
+     box-shadow: -.2em -.03em .05em .011em $gray;
+     text-shadow: .09em -.03em .005em $gray;
+     /*background-clip: text;*/
+ }
+ 
+ /* nav */
+ nav {
+     z-index: 10;
+     position: fixed;
+     top: 0;
+     background-color: $white;
+     width: 100%;
+     height: 5rem;
+     box-shadow: .15em .15em .40em .15em $gray;
+     ul {
+         text-align: center;
+ 
+         li {
+             display: inline-block;
+             padding: 1.5em 5em 0 0;
+ 
+             a {
+                 text-decoration: none;
+                 font-family: $fonts01;
+                 color: $black;
+                 font-size: 1.5em;
+                 padding: (16/16) * 0.5em;
+                 border-radius: (16/16) * .5em;
+                 transition: ease-in 0.3s background-color;
+             }
+             a:hover {
+                 border-radius: (16/16) * 0.5em;
+                 background-color: $red_opacue;
+                 padding: (16/16) * 0.5em;
+                 transition-delay:0.2s;
+             }
+         }
+     }
+ }
+ 
+ /* main */
+ main {
+     width: 100%;
+     text-align: center;
+    //  margin-top: 0;
+     background-color: $white;
+     // width: inherit;
+     header {
+         width: 50%;
+         margin-left: auto;
+         margin-right: auto;
+     }
+ 
+     h1 {
+         font-family: $fonts01;
+         color: $red;
+         text-align: left;
+         font-size: 7em;
+         line-height: 1em;
+         padding-bottom: 2em;
+         padding-top: .7em;
+         text-shadow: 2px 2px 2px $gray;
+     }
+ 
+     h2::first-letter {
+         display: inline-block;
+         font-family: $fonts01;
+         color: $white;
+         background-color: $red;
+         border-radius: .10em;
+         padding: .10em;
+         text-shadow: 2px 2px 2px $gray;
+     }
+ 
+     h2 {
+         display: inline-block;
+         font-family: $fonts01;
+         font-size: 3.5em;
+         color: $red;
+         text-shadow: 2px 2px 2px $gray;
+ 
+     }
+ 
+     p {
+         font-family: $fonts01;
+         font-size: 1.25em;
+         text-align: justify;
+         text-justify: inter-word;
+     }
+ }
+ 
+ /* article */
+ article:nth-last-child(2){
+     margin-bottom: 6rem;
+     margin-top: 16rem;
+ 
+ }
+ 
+ article {
+     position: relative;
+     width: 50%;
+     text-align: left;
+     word-wrap: break-word;
+     background-color: $white;
+     display: block;
+     margin-top: auto;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 10rem;
+ 
+     div:nth-child(3) {
+         border-top: solid black 2px;
+         border-bottom: solid black 2px;
+         font-family: $fonts02;
+         margin-top: 1em;
+         margin-bottom: 1em;
+         padding-left: 1em;
+     }
+ 
+     div:nth-child(4n-6) {
+         float: right;
+         margin: 1em;
+         img {
+             border-radius: 20px;
+             border: solid ((16/16) * 0.2em) $gray;
+             width: 100%;
+         }
+     }
+ 
+     .picture {
+         position: relative;
+         width: (200/16) * 1em;
+         height: auto;
+         float: left;
+         margin: 1em;
+         img {
+             border-radius: (20/16) * 1em;
+             border: solid ((16/16) * 0.2em) $gray;
+             width: 100%;
+             display: block;
+             height: auto;
+         }
+         .caption {
+            position: absolute;
+            border-radius: (20/16) * 1em;
+            bottom: -1em;
+            left: -1em;
+            right: 0;
+            background-color: $red_opacue;
+            overflow: hidden;
+            width: 103%;
+            height: 0;
+            transition: .5s ease;
+         }
+         p{
+           color: white;
+           font-size: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           text-align: center;
+         }
+     }
+ }
+
+.picture:hover .caption {
+    height: 100%;
+}
+ 
+ :nth-last-child(3) .date{
+     position: relative;
+     left: -7em;
+     top: 5.5em;
+ }
+ 
+ .date{
+     position: absolute;
+     right: -7em;
+     top: -1.5em;
+     text-align: center;
+     text-decoration: none;
+     list-style-type: none;
+     width: 5.5rem;
+     height: 5.5rem;
+     border-radius: (100/16) * 1em;
+     background-color: $black;
+     font-family: $fonts03;
+     color: $light_gray;
+     padding: .4rem .4rem .4rem .4rem;
+     transform: rotate(15deg);
+     margin: 0;
+     .day {
+         font-size: 2em; 
+         margin: 0;
+         padding-top: .2rem;
+     }
+     .month{
+         font-size: 1.25em;
+         margin: 0;
+         padding: 0;
+     }
+     .year {
+         font-size: 1.25em;
+         margin: 0;
+         padding: 0;  
+     }
+ }
+ 
+ .social{
+     margin-top: 3em;
+     float: right;
+     clear:both;
+     
+     li{
+         display: inline-block;
+     }
+     a{
+         opacity: 0.5;
+     }   
+     a:hover {
+         opacity: 1;
+     }
+ }
+ 
+ ol{
+     font-family: $fonts01;
+     padding: 2em 2em 2em 3em;
+     font-size: 1.25em;
+ }
+ 
+ span:first-child{
+     padding-left: 0;
+     font-size: 1.75em;
+     color: $red;
+     font-family: $fonts03;
+ }
+ 
+ span{
+     padding-left: 1em;
+     font-size: 1.75em;
+     color: $black;
+     font-family: $fonts03;
+ }
+ 
+ footer{
+     position: absolute;
+     bottom: -8em;
+ }
+ 
+ .main{
+     position: relative;
+     div{
+         display: inline-block;
+         padding: (16/16) * 0.5em;
+         a {
+             text-decoration: none;
+             font-family: $fonts01;
+             color: $black;
+             font-size: 1.5em;
+             padding: (16/16) * 0.5em;
+             border-radius: (16/16) * 0.5em;
+             transition: ease-in 0.3s background-color;
+             
+         }
+         a:hover {
+             border-radius: (16/16) * 0.5em;
+             background-color: $red_opacue;
+             transition-delay:0.2s;
+         }
+     }
+ }
+ 

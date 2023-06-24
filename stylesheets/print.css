@@ -1,0 +1,330 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Poppins|Faster+One|Homemade+Apple|VT323");
+/* html, body*/
+/* line 25, ../sass/print.scss */
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, ../sass/print.scss */
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 35, ../sass/print.scss */
+#banner {
+  font-family: "Faster One", cursive;
+  right: -5em;
+  top: 4em;
+  z-index: 8;
+  transform: rotate(45deg);
+  z-index: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: red;
+  color: white;
+  width: 15em;
+  height: 3rem;
+  box-shadow: -0.2em -0.03em 0.05em 0.011em gray;
+  text-shadow: 0.09em -0.03em 0.005em gray;
+  /*background-clip: text;*/
+}
+
+/* nav */
+/* line 55, ../sass/print.scss */
+nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 5rem;
+  box-shadow: 0.15em 0.15em 0.4em 0.15em gray;
+}
+/* line 63, ../sass/print.scss */
+nav ul {
+  text-align: center;
+}
+/* line 66, ../sass/print.scss */
+nav ul li {
+  display: inline-block;
+  padding: 1.5em 5em 0 0;
+}
+/* line 70, ../sass/print.scss */
+nav ul li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition: ease-in 0.3s background-color;
+}
+/* line 79, ../sass/print.scss */
+nav ul li a:hover {
+  border-radius: 0.5em;
+  background-color: rgba(252, 81, 81, 0.5);
+  padding: 0.5em;
+  transition-delay: 0.2s;
+}
+
+/* main */
+/* line 90, ../sass/print.scss */
+main {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+/* line 96, ../sass/print.scss */
+main header {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 102, ../sass/print.scss */
+main h1 {
+  font-family: "Poppins", sans-serif;
+  color: red;
+  text-align: left;
+  font-size: 7em;
+  line-height: 1em;
+  padding-bottom: 2em;
+  padding-top: .7em;
+  text-shadow: 2px 2px 2px gray;
+}
+/* line 113, ../sass/print.scss */
+main h2::first-letter {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: red;
+  border-radius: .10em;
+  padding: .10em;
+  text-shadow: 2px 2px 2px gray;
+}
+/* line 123, ../sass/print.scss */
+main h2 {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5em;
+  color: red;
+  text-shadow: 2px 2px 2px gray;
+}
+/* line 132, ../sass/print.scss */
+main p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* article */
+/* line 141, ../sass/print.scss */
+article:nth-last-child(2) {
+  margin-bottom: 6rem;
+  margin-top: 16rem;
+}
+
+/* line 147, ../sass/print.scss */
+article {
+  position: relative;
+  width: 50%;
+  text-align: left;
+  word-wrap: break-word;
+  background-color: white;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10rem;
+}
+/* line 159, ../sass/print.scss */
+article div:nth-child(3) {
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  font-family: "Homemade Apple", cursive;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+/* line 168, ../sass/print.scss */
+article div:nth-child(4n-6) {
+  float: right;
+  margin: 1em;
+}
+/* line 171, ../sass/print.scss */
+article div:nth-child(4n-6) img {
+  border-radius: 20px;
+  border: solid 0.2em gray;
+  width: 100%;
+}
+/* line 178, ../sass/print.scss */
+article .picture {
+  position: relative;
+  width: 12.5em;
+  height: auto;
+  float: left;
+  margin: 1em;
+}
+/* line 184, ../sass/print.scss */
+article .picture img {
+  border-radius: 1.25em;
+  border: solid 0.2em gray;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+/* line 191, ../sass/print.scss */
+article .picture .caption {
+  position: absolute;
+  border-radius: 1.25em;
+  bottom: -1em;
+  left: -1em;
+  right: 0;
+  background-color: rgba(252, 81, 81, 0.5);
+  overflow: hidden;
+  width: 103%;
+  height: 0;
+  transition: .5s ease;
+}
+/* line 203, ../sass/print.scss */
+article .picture p {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* line 217, ../sass/print.scss */
+.picture:hover .caption {
+  height: 100%;
+}
+
+/* line 221, ../sass/print.scss */
+:nth-last-child(3) .date {
+  position: relative;
+  left: -7em;
+  top: 5.5em;
+}
+
+/* line 227, ../sass/print.scss */
+.date {
+  position: absolute;
+  right: -7em;
+  top: -1.5em;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 6.25em;
+  background-color: black;
+  font-family: "VT323", monospace;
+  color: lightGray;
+  padding: .4rem .4rem .4rem .4rem;
+  transform: rotate(15deg);
+  margin: 0;
+}
+/* line 243, ../sass/print.scss */
+.date .day {
+  font-size: 2em;
+  margin: 0;
+  padding-top: .2rem;
+}
+/* line 248, ../sass/print.scss */
+.date .month {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+/* line 253, ../sass/print.scss */
+.date .year {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 260, ../sass/print.scss */
+.social {
+  margin-top: 3em;
+  float: right;
+  clear: both;
+}
+/* line 265, ../sass/print.scss */
+.social li {
+  display: inline-block;
+}
+/* line 268, ../sass/print.scss */
+.social a {
+  opacity: 0.5;
+}
+/* line 271, ../sass/print.scss */
+.social a:hover {
+  opacity: 1;
+}
+
+/* line 276, ../sass/print.scss */
+ol {
+  font-family: "Poppins", sans-serif;
+  padding: 2em 2em 2em 3em;
+  font-size: 1.25em;
+}
+
+/* line 282, ../sass/print.scss */
+span:first-child {
+  padding-left: 0;
+  font-size: 1.75em;
+  color: red;
+  font-family: "VT323", monospace;
+}
+
+/* line 289, ../sass/print.scss */
+span {
+  padding-left: 1em;
+  font-size: 1.75em;
+  color: black;
+  font-family: "VT323", monospace;
+}
+
+/* line 296, ../sass/print.scss */
+footer {
+  position: absolute;
+  bottom: -8em;
+}
+
+/* line 301, ../sass/print.scss */
+.main {
+  position: relative;
+}
+/* line 303, ../sass/print.scss */
+.main div {
+  display: inline-block;
+  padding: 0.5em;
+}
+/* line 306, ../sass/print.scss */
+.main div a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition: ease-in 0.3s background-color;
+}
+/* line 316, ../sass/print.scss */
+.main div a:hover {
+  border-radius: 0.5em;
+  background-color: rgba(252, 81, 81, 0.5);
+  transition-delay: 0.2s;
+}
